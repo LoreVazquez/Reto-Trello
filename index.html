@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Trello</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <!-- Comienza Header-->
+    <header>
+      <nav>
+        <div class="navbar left">
+          <a href="#"><img src="assets/images/trello-mark-white.png" alt="tab">Tableros</a>
+          <form class='navbar'>
+            <input type="text" id='search' value="">
+            <label for="search"><i class="fas fa-search"></i></label>
+          </form>
+        </div>
+        <div class="logo navbar">
+          <img src="assets/images/trello-logo-white.png" alt="logo">
+        </div>
+        <div class="navbar right">
+          <a href="#"><img src="assets/images/add.png" alt="add"></a>
+          <a href="#"><img src="assets/images/information.png" alt="info"></a>
+          <a href="#"><img src="assets/images/bell.png" alt="bell"></a>
+          <a href="#"><img src="assets/images/profile.png" alt="profile"></a>
+        </div>
+      </nav>
+    <!--Fin de Header-->
+    </header>
+    <!--Main Board-->
+    <main>
+    <!--Seccion de informacion del tablero actual-->
+      <section class="board-data">
+        <button class="name" type="button" name="name">Reto de codigo</button>
+        <button type="button" name="favorite"><i class="far fa-star"></i></button>
+        <button type="button" name="type">Personal</button>
+        <button type="button" name="status">Privado</button>
+      </section>
+      <!--Formulario para agregar nueva lista-->
+      <section class="addlist">
+        <form class="" action="index.html" method="post">
+          <input type="text" id="newlist" name="add-list" placeholder="Añadir una lista..." value="">
+        </form>
+      </section>
+    </main>
+    <!--Fin Main Board-->
+  <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>

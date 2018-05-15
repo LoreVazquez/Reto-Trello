@@ -1,0 +1,130 @@
+/*Estilo general de body*/
+body{
+  background-color:#0079bf;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/*Estilo del encabezado*/
+ header {
+   background-color: #0067a3;
+   height: 45px;
+ }
+
+ .navbar{
+   display: inline-block;
+   position: relative;
+ }
+
+.navbar img {
+  height: 20px;
+  width: 20px;
+}
+
+.left a, .left form {
+  background-color: hsl(202, 47%, 53%);
+  bottom: 6px;
+  border-radius: 5%;
+  color: white;
+  padding: 5px;
+  position: relative;
+  text-decoration: none;
+  margin-left: 7px;
+}
+
+.left input{
+  background-color: hsl(202, 47%, 53%);
+  border: none;
+  color: white;
+  padding: 0;
+}
+
+.left  img, .right img {
+  background-color: hsl(202, 47%, 53%);
+  position: relative;
+  top:5px;
+}
+
+.logo {
+  position: relative;
+  left: 20%;
+}
+
+.logo img{
+  height: 30px;
+  width: 120px;
+}
+
+.right {
+  left: 55%;
+}
+
+.right img{
+  border-radius: 15%;
+  margin: 2px;
+  padding: 5px;
+}
+
+a:hover, .left form:hover {
+  opacity:.5;
+}
+
+/*Estilo de la informacion del tablero actual*/
+.board-data button {
+  background-color:#0079bf;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+
+.board-data button:hover, #newlist:hover{
+  background-color: rgb(25, 77, 120);
+  border-radius: 5%;
+}
+
+.board-data .name{
+  font-size: 1.1em;
+}
+
+/* Estilos de addList*/
+#newlist{
+  background-color: #0067a3;
+  border: none;
+  border-radius: 3%;
+  color: white;
+  height: 35px;
+  margin: 1vw;
+  padding: 5px;
+  width: 20vw;
+}
+
+::placeholder {
+  color: rgb(182, 203, 222);
+  font-weight: bold;
+}
+
+/*Estilo de addList al dar click*/
+.new {
+  background-color: rgb(218, 227, 226);
+  border-radius: 2%;
+  width: 23vw;
+}
+
+.new > .save {
+  background-color: rgb(57, 187, 109);
+  border: none;
+  border-radius: 10%;
+  color: white;
+  font-weight: bold;
+  margin: 0 1vw 1vw 1vw;
+  padding: 3vh;
+}
+
+.new > .close{
+  background-color: rgb(218, 227, 226);
+  border: none;
+  font-size: 1.5em;
+  font-weight: 900;
+}
