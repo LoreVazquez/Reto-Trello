@@ -95,9 +95,9 @@ a:hover, .left form:hover {
   border-radius: 3%;
   color: white;
   height: 35px;
-  margin: 1vw;
+  margin: 2px;
   padding: 5px;
-  width: 20vw;
+  width: 18vw;
 }
 
 ::placeholder {
@@ -106,10 +106,10 @@ a:hover, .left form:hover {
 }
 
 /*Estilo de addList al dar click*/
-.new {
+.new, .inline {
   background-color: rgb(218, 227, 226);
   border-radius: 2%;
-  width: 23vw;
+  width: 19vw;
 }
 
 .new > .save {
@@ -118,8 +118,8 @@ a:hover, .left form:hover {
   border-radius: 10%;
   color: white;
   font-weight: bold;
-  margin: 0 1vw 1vw 1vw;
-  padding: 3vh;
+  margin: 5px;
+  padding: 10px;
 }
 
 .new > .close{
@@ -128,3 +128,29 @@ a:hover, .left form:hover {
   font-size: 1.5em;
   font-weight: 900;
 }
+
+/* Estilos para la seccion de anadir tarjetas */
+#task-board, #addlist{
+  display: inline-block;
+  margin: 0%;
+  width: fit-content;
+}
+
+.inline {
+  display: inline-block;
+  margin: 2px;
+}
+
+.inline > h4{
+  margin: 10px;
+}
+
+.inline > a{
+  color:gray;
+  font-size: .8em;
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+}
+
+
