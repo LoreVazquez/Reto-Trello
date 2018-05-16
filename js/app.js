@@ -17,7 +17,7 @@ function createButton(e){
   conteinerList.appendChild(saveButton);
   conteinerList.appendChild(cancelButton);
   saveButton.appendChild(document.createTextNode ("Guardar"));
-  cancelButton.innerHTML = "&times;" 
+  cancelButton.innerHTML = "&times;";
   newList.removeEventListener("click",createButton);
 };
 
@@ -26,9 +26,6 @@ newList.addEventListener('click',createButton);
 /* Funcion para agregar un nuevo cuadro donde estara el nombre de la nueva lista*/
 
 var newTaskBoard = document.getElementById("task-board");
-//var addTask = document.createElement("a");
-//addTask.setAttribute('class', 'addTarget');
-
 
 function addTaskBoard(e){
   var nameTaskBoard = document.getElementById("newlist").value;
@@ -45,12 +42,15 @@ function addTaskBoard(e){
   conteinerTask.appendChild(addTask);
   addTask.appendChild(document.createTextNode("Añadir una tarjeta..."));
 
+  var addButton = document.createElement("button");
+  var closeButton = document.createElement("button");
+  var newTarget = document.createElement("textarea");
+
   addTask.addEventListener("click", function(){
-    var newTarget = document.createElement("textarea");
+    
     newTarget.className = "newTarget";
-    var addButton = document.createElement("button");
-    var closeButton = document.createElement("button");
     addButton.type = "button";
+    addButton.id = "addButton";
     addButton.className = "save";
     closeButton.type = "button";
     closeButton.className = "close";
@@ -59,12 +59,21 @@ function addTaskBoard(e){
     addButton.appendChild(document.createTextNode("Añadir"));
     conteinerTask.appendChild(closeButton);
     closeButton.innerHTML = "&times;" 
+    newTarget.focus();
     addTask.style.display = "none";
-    
   });
 
-
-
+  addButton.addEventListener("click", function(){
+    var target = newTarget.value;
+    newTarget.value = "";
+    var listTarget = document.createElement("div");
+    listTarget.className = "targets";
+    var aTarget = document.createElement('span');
+    aTarget.className = "targets";
+    conteinerTask.insertBefore(listTarget,newTarget);
+    listTarget.appendChild(aTarget);
+    aTarget.appendChild(document.createTextNode(target));
+  });
 }
 
 saveButton.addEventListener("click", addTaskBoard);
