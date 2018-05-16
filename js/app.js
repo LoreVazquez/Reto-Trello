@@ -23,23 +23,48 @@ function createButton(e){
 
 newList.addEventListener('click',createButton);
 
-var newTaskBoard = document.getElementById("task-board");
+/* Funcion para agregar un nuevo cuadro donde estara el nombre de la nueva lista*/
 
-/* Funcion para agregar tarjetas a una lista*/
+var newTaskBoard = document.getElementById("task-board");
+//var addTask = document.createElement("a");
+//addTask.setAttribute('class', 'addTarget');
+
 
 function addTaskBoard(e){
   var nameTaskBoard = document.getElementById("newlist").value;
   document.getElementById("newlist").value = "";
+  var addTask = document.createElement("a");
   var conteinerTask = document.createElement("div");
   var tittleTaskBoard = document.createElement("h4");
-  var addTask = document.createElement("a");
+  addTask.setAttribute('class', 'addTarget');
   addTask.href = "#";
   conteinerTask.className = "inline";
   tittleTaskBoard.appendChild(document.createTextNode(nameTaskBoard));
   newTaskBoard.appendChild(conteinerTask);
   conteinerTask.appendChild(tittleTaskBoard);
   conteinerTask.appendChild(addTask);
-  addTask.appendChild(document.createTextNode("Añadir una tarjeta..."))
+  addTask.appendChild(document.createTextNode("Añadir una tarjeta..."));
+
+  addTask.addEventListener("click", function(){
+    var newTarget = document.createElement("textarea");
+    newTarget.className = "newTarget";
+    var addButton = document.createElement("button");
+    var closeButton = document.createElement("button");
+    addButton.type = "button";
+    addButton.className = "save";
+    closeButton.type = "button";
+    closeButton.className = "close";
+    conteinerTask.appendChild(newTarget);
+    conteinerTask.appendChild(addButton)
+    addButton.appendChild(document.createTextNode("Añadir"));
+    conteinerTask.appendChild(closeButton);
+    closeButton.innerHTML = "&times;" 
+    addTask.style.display = "none";
+    
+  });
+
+
+
 }
 
 saveButton.addEventListener("click", addTaskBoard);

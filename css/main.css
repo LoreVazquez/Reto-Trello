@@ -112,7 +112,7 @@ a:hover, .left form:hover {
   width: 19vw;
 }
 
-.new > .save {
+.save {
   background-color: rgb(57, 187, 109);
   border: none;
   border-radius: 10%;
@@ -122,7 +122,7 @@ a:hover, .left form:hover {
   padding: 10px;
 }
 
-.new > .close{
+.close{
   background-color: rgb(218, 227, 226);
   border: none;
   font-size: 1.5em;
@@ -153,4 +153,8 @@ a:hover, .left form:hover {
   text-decoration: none;
 }
 
-
+.newTarget{
+  display: block;
+  margin: 10px;
+  width: 16vw;
+}
